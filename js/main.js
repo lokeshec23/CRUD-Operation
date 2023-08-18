@@ -75,7 +75,7 @@ addBtn.addEventListener('click', () => {
     const qualificationTd = document.createElement('td');
 
     // Update counter and cell values
-    count++;
+    count++;  
     cntTd.innerText = count;
     nameTd.innerText = nameValue.toUpperCase();
     ageTd.innerText = ageValue;
