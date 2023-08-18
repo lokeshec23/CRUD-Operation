@@ -82,8 +82,12 @@ addBtn.addEventListener('click', () => {
     qualificationTd.innerText = qualificationValue.toUpperCase();
 
     // Append cells to row and row to table body
-    tr.append(cntTd, nameTd, ageTd, qualificationTd);
-    tBody.append(tr);
+    tr.insertAdjacentElement('afterbegin',cntTd);
+    tr.insertAdjacentElement('beforeend', nameTd);
+    tr.insertAdjacentElement('beforeend', ageTd);
+    tr.insertAdjacentElement('beforeend',qualificationTd)
+    tBody.append(tr)
+    
 });
 
 // Function to reset input fields
