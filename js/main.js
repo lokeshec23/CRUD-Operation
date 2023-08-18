@@ -1,6 +1,6 @@
 const inputContainer = document.getElementById('input-container');
 const inputBtns = document.getElementById('input-btns');
-
+const noFoundImg =   document.getElementById('no-found-img');
 // Create Name Element
 const nameElement = document.createElement('input');
 nameElement.setAttribute("type", "text");
@@ -48,6 +48,8 @@ const table = document.querySelector('table');
 const tBody = document.querySelector('tbody');
 var count = 0;
 addBtn.addEventListener('click',()=>{
+    noFoundImg.style = "display: none";
+    table.style="display: table";
     const nameValue = nameElement.value;
     const ageValue = ageElement.value;
     const qualificationValue = qualificationElement.value;
@@ -70,3 +72,4 @@ function resetInput(){
     ageElement.value = '';
     qualificationElement.value='';
 }
+

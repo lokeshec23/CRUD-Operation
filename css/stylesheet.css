@@ -9,3 +9,12 @@ input{
     outline: none;
     border-radius: 5px;
 }
+
+table{
+    display: none;
+}
+
+.no-img{
+    opacity: 0.5;
+    display: inline;
+}
