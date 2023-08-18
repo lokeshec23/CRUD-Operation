@@ -1,20 +1,24 @@
-*{
+/* Reset default margin, padding, and font for all elements */
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-input{
-    border: 1px solid #000;
-    outline: none;
-    border-radius: 5px;
+/* Styling for input elements */
+input {
+    border: 1px solid #000; /* Add a black border */
+    outline: none; /* Remove default outline */
+    border-radius: 5px; /* Apply rounded corners */
 }
 
-table{
-    display: none;
+/* Styling for table elements */
+table {
+    display: none; /* Initially hide the table */
 }
 
-.no-img{
-    opacity: 0.5;
-    display: inline;
+/* Styling for elements with class 'no-img' */
+.no-img {
+    opacity: 0.5; /* Set opacity to make the image slightly transparent */
+    display: inline; /* Display the image inline */
 }
