@@ -55,7 +55,7 @@ inputBtns.insertAdjacentElement('beforeend', resetBtn);
 // Get references to table elements
 const table = document.querySelector('table');
 const tBody = document.querySelector('tbody');
-var count = 0;
+var count = 0;  //Set value for serial number 
 
 // Add event listener for "Add" button
 addBtn.addEventListener('click', () => {
@@ -107,5 +107,8 @@ function createTableElement(){
     tr.insertAdjacentElement('beforeend', ageTd);
     tr.insertAdjacentElement('beforeend',qualificationTd)
     tBody.append(tr)
-    
+  
+    // Reset Input Fields after adding new data in the table
+    resetInput();
+
 }
