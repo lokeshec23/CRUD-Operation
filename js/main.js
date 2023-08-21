@@ -5,7 +5,7 @@ const noFoundImg = document.getElementById('no-found-img');
 
 // Create Name Element
 const nameElement = document.createElement('input');
-nameElement.setAttribute("type", "text");
+nameElement.setAttribute("type", "search");
 nameElement.className = "mx-2 p-1";
 nameElement.placeholder = "Enter Name...";
 inputContainer.insertAdjacentElement('beforeend', nameElement);
@@ -29,7 +29,7 @@ nameElement.insertAdjacentElement('afterend', agelable);
 
 // Create Qualification Element
 const qualificationElement = document.createElement('input');
-qualificationElement.setAttribute("type", "text");
+qualificationElement.setAttribute("type", "search");
 qualificationElement.className = "mx-2 p-1";
 qualificationElement.placeholder = "Enter Qualification...";
 inputContainer.insertAdjacentElement('beforeend', qualificationElement);
@@ -59,6 +59,26 @@ var count = 0;
 
 // Add event listener for "Add" button
 addBtn.addEventListener('click', () => {
+    if(nameElement.value === '' || ageElement.value === '' || qualificationElement.value === ''){
+        alert("Please fill all fields");
+        resetInput();
+        return;
+    }
+    else{
+        createTableElement();
+    }
+});
+
+// Function to reset input fields
+function resetInput() {
+    nameElement.value = '';
+    ageElement.value = '';
+    qualificationElement.value = '';
+}
+
+//Function to Create Table Element
+function createTableElement(){
+    //Change Image Display -> None & Change Table Display -> Table
     noFoundImg.style = "display: none";
     table.style = "display: table";
 
@@ -88,11 +108,4 @@ addBtn.addEventListener('click', () => {
     tr.insertAdjacentElement('beforeend',qualificationTd)
     tBody.append(tr)
     
-});
-
-// Function to reset input fields
-function resetInput() {
-    nameElement.value = '';
-    ageElement.value = '';
-    qualificationElement.value = '';
 }
